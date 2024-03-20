@@ -1,0 +1,37 @@
+td.case{
+    background-color:tan;
+    width:55px;
+    height:55px;
+    text-align:center;
+    font-size:30px;
+    color:white;
+}
+
+table{
+    margin:20px auto;
+}
+
+#warning{
+    color:blue;
+    text-align:center;
+}
+
+#lose{
+    margin-left:47%;
+}
+
+#init1{
+    color:red;
+}
+
+#init2{
+    color:blue;
+}
+
+#init3{
+    color:green;
+}
+
+#init4{
+    color:purple;
+}

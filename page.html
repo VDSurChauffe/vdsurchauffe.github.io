@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='chess.css'>
+    <title>Untitled Horse Game</title>
+  </head>
+  <body>
+    <table id='chessboard'>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case' id='init1'>K</td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case' id='init2'>K</td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case' id='init3'>K</td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case' id='init4'>T</td>
+      </tr>
+    </table>
+    <div id='warning'>Choose a tile to move the red knight to.
+      <br>Players move their knights in order.
+      <br>If you do not want to/cannot move, use the 'quit' button to lose the game.
+      <br>Each tile, including starting tiles, can only be visited once.
+    </div>
+    <button id='lose'>Quit</button>
+    <script src='movey.js'></script>
+  </body>
+</html>
