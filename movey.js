@@ -1,12 +1,12 @@
 function next(){
-    return names[(playerId+1)%places.length];
+    return colors[(playerId+1)%places.length];
 }
 
 function trymove(){
     place = places[playerId];
     for (let i=0; i<8; i++){
         if (place+legal_offsets[i] == this.idCase && this.textContent == ' '){
-            warning.textContent = `Tour du joueur ${next()}`;
+            warning.textContent = `${next()}'s turn`;
             warning.style.color = 'blue';
             this.textContent = 'K';
             this.style.color = colors[playerId];
@@ -16,7 +16,7 @@ function trymove(){
         }
     }
     if (places[playerId] == place){
-        warning.textContent = 'Votre cavalier ne peut pas se déplacer ici.';
+        warning.textContent = 'Your knight can't move here.';
         warning.style.color = 'red';
     }
     else {
@@ -30,18 +30,16 @@ function trymove(){
 function resign(){
     echiquier[places[playerId]].textContent = 'R';
     echiquier[places[playerId]].style.backgroundColor = 'black';
-    warning.textContent = `Le joueur ${names[playerId]} a abandonné. C'est au tour du joueur ${next()}.`;
+    warning.textContent = `${colors[playerId]} has quit. ${next()} is up next.`;
     places.splice(playerId,1);
-    names.splice(playerId,1);
     colors.splice(playerId,1);
     if (places.length == 1){
-        warning.textContent = `Le joueur ${names[0]} a gagné !`
+        warning.textContent = `${names[0]} wins!`
     }
     playerId = playerId%places.length;
 }
 
 let places = [12,16,41,63];
-let names = ['rouge','bleu','vert','violet'];
 let colors = ['red','blue','green','purple'];
 let playerId = 0;
 let legal_offsets = [-17,-15,-10,-6,6,10,15,17];
