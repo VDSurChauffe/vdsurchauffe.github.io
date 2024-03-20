@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='chess.css'>
+    <title>C a v a l i e r</title>
+  </head>
+  <body>
+    <table id='chessboard'>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case' id='init1'>K</td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case' id='init2'>K</td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case' id='init3'>K</td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+      </tr>
+      <tr>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case'> </td>
+        <td class='case' id='init4'>T</td>
+      </tr>
+    </table>
+    <div id='warning'>Choisissez une case où déplacer le cavalier rouge.
+      <br>Les joueurs déplacent leur cavalier/tour à tour de rôle.
+      <br>Si vous ne voulez ou ne pouvez pas vous déplacer, vous devez utiliser le bouton 'abandon'.
+      <br>Chaque case ne peut être visitée qu'une seule fois, même les cases de départ.
+    </div>
+    <button id='lose'>Abandonner</button>
+    <script src='movey_v2.js'></script>
+  </body>
+</html>
