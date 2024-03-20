@@ -16,7 +16,7 @@ function trymove(){
         }
     }
     if (places[playerId] == place){
-        warning.textContent = 'Your knight can't move here.';
+        warning.textContent = 'Your knight cannot move here.';
         warning.style.color = 'red';
     }
     else {
