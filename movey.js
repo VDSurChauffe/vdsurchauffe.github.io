@@ -1,5 +1,5 @@
 function next(){
-    return colors[(playerId+1)%places.length];
+    return capnames[(playerId+1)%places.length];
 }
 
 function trymove(){
@@ -30,19 +30,21 @@ function trymove(){
 function resign(){
     echiquier[places[playerId]].textContent = 'R';
     echiquier[places[playerId]].style.backgroundColor = 'black';
-    warning.textContent = `${colors[playerId]} has quit. ${next()} is up next.`;
-    places.splice(playerId,1);
-    colors.splice(playerId,1);
+    warning.textContent = `${capnames[playerId]} has quit. ${next()} is up next.`;
+    places.splice(playerId, 1);
+    colors.splice(playerId, 1);
+    capnames.splice(playerId, 1);
     if (places.length == 1){
-        warning.textContent = `${names[0]} wins!`
+        warning.textContent = `${capnames[0]} wins!`
     }
     playerId = playerId%places.length;
 }
 
-let places = [12,16,41,63];
-let colors = ['red','blue','green','purple'];
+let places = [12, 16, 41, 63];
+let colors = ['red', 'blue', 'green', 'purple'];
+let capnames = ['Red', 'Blue', 'Green', 'Purple']
 let playerId = 0;
-let legal_offsets = [-17,-15,-10,-6,6,10,15,17];
+let legal_offsets = [-17, -15, -10, -6, 6, 10, 15, 17];
 var warning = document.getElementById('warning');
 var echiquier = document.getElementsByClassName('case');
 for (let i=0; i<64; i++){
