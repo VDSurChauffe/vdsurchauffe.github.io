@@ -3,6 +3,9 @@ function next(){
 }
 
 function trymove(){
+    if (won == true){
+        return 0;
+    }
     place = places[playerId];
     for (let i=0; i<8; i++){
         if (place+legal_offsets[i] == this.idCase && this.textContent == ' '){
@@ -35,7 +38,8 @@ function resign(){
     colors.splice(playerId, 1);
     capnames.splice(playerId, 1);
     if (places.length == 1){
-        warning.textContent = `${capnames[0]} wins!`
+        warning.textContent = `${capnames[0]} wins!`;
+        won = true;
     }
     playerId = playerId%places.length;
 }
@@ -44,6 +48,7 @@ let places = [12, 16, 41, 63];
 let colors = ['red', 'blue', 'green', 'purple'];
 let capnames = ['Red', 'Blue', 'Green', 'Purple']
 let playerId = 0;
+let won = false;
 let legal_offsets = [-17, -15, -10, -6, 6, 10, 15, 17];
 var warning = document.getElementById('warning');
 var echiquier = document.getElementsByClassName('case');
