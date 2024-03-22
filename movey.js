@@ -34,7 +34,7 @@ function resign(){
     places.splice(playerId,1);
     colors.splice(playerId,1);
     if (places.length == 1){
-        warning.textContent = `${names[0]} wins!`
+        warning.textContent = `${places[0]} wins!`
     }
     playerId = playerId%places.length;
 }
